@@ -20,7 +20,6 @@ export default function App() {
         </div>
         <Tree>
           <Tree.Folder name="Notes">
-            <Tree.Folder name="Mamun Sir"></Tree.Folder>
             <Tree.Folder name="Self">
               {file(
                 "Physical Quantities and Uncertainties.pdf",
@@ -45,6 +44,44 @@ export default function App() {
               {file(
                 "Radioactivity.pdf",
                 "https://drive.google.com/file/d/1W-cQPRNRS2Q5lsxy9v2JBvaGVG7EHV4c/view?usp=sharing"
+              )}
+            </Tree.Folder>
+            <Tree.Folder name="Mamun Sir">
+              {file(
+                "Physical Quantities and Uncertainties.pdf",
+                "https://drive.google.com/file/d/1Ym63L92RA2x82gLGAKf4R7c9Tp4ALl-n/view?usp=sharing"
+              )}
+              {file(
+                "Measurement Techniques.pdf",
+                "https://drive.google.com/file/d/15w97KyX8VaktzS9gr_hNNiBx0_uJR-Bn/view?usp=sharing"
+              )}
+              {file(
+                "Kinematics.pdf",
+                "https://drive.google.com/file/d/1Mvf6C4XuMy5-9_lpwAh31KEbBkhn8wCg/view?usp=sharing"
+              )}
+              {file(
+                "Dynamics.pdf",
+                "https://drive.google.com/file/d/1rUsVED_iQBPGXnMHIItHOvVrQFa2GZDo/view?usp=sharing"
+              )}
+              {file(
+                "Deformation of Solids.pdf",
+                "https://drive.google.com/file/d/1Mwa-PXEaQXNjKAVsOBKAGC8_FneFlRRi/view?usp=sharing"
+              )}
+              {file(
+                "Waves.pdf",
+                "https://drive.google.com/file/d/1ctZ5h9_Wrh3HRcB7JgAFDEWtXmjXK7xQ/view?usp=sharing"
+              )}
+              {file(
+                "Superposition of Waves.pdf",
+                "https://drive.google.com/file/d/1r6LIaJdFzkqaVb0RvEkHKtbT31zfgNCD/view?usp=sharing"
+              )}
+              {file(
+                "Current of Electricity.pdf",
+                "https://drive.google.com/file/d/1AExvgvk3BwnG6sxGIgQmvSyZsoBWrKYg/view?usp=sharing"
+              )}
+              {file(
+                "DC Circuits.pdf",
+                "https://drive.google.com/file/d/1N5A1jC4xZ6Vv4iiT0ERSoy8MSYAQR6PL/view?usp=sharing"
               )}
             </Tree.Folder>
           </Tree.Folder>

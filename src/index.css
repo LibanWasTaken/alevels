@@ -197,13 +197,12 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* 
 * {
   scrollbar-width: none;
   scrollbar-color: var(--clr-primary-7) #ffffff;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px;
 }
@@ -215,4 +214,4 @@ p {
 *::-webkit-scrollbar-thumb {
   background-color: var(--clr-primary-7);
   border-radius: 10px;
-}
+} */

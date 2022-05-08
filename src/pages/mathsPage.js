@@ -58,7 +58,12 @@ export default function App() {
                 "https://drive.google.com/file/d/1-lMHbax_kPwUKYkIEcQkyuxoQfB8AMk0/view?usp=sharing"
               )}
             </Tree.Folder>
-            <Tree.Folder name="Mechanics"></Tree.Folder>
+            <Tree.Folder name="Mechanics">
+              {file(
+                "Zainematics.dropbox",
+                "https://www.dropbox.com/sh/pyjinozmj4dtvcr/AAAE0UQpf82wL1Dbe7L333wRa/NOTES/M1?dl=0&subfolder_nav_tracking=1"
+              )}
+            </Tree.Folder>
             <Tree.Folder name="S1"></Tree.Folder>
             <Tree.Folder name="p3"></Tree.Folder>
           </Tree.Folder>

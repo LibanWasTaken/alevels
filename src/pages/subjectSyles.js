@@ -50,13 +50,12 @@ export const Wrapper = styled.main`
     z-index: 10;
   }
 
-  .pp {
-    z-index: -1000000;
-  }
-
   @media screen and (max-width: 800px) {
     .App {
-      width: 100%;
+      /* min-width: 100%; */
+    }
+    .tree {
+      margin-left: 25%;
     }
   }
 `;
