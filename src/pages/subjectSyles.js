@@ -6,9 +6,8 @@ export const Wrapper = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   margin-bottom: 5rem;
-  user-select: none;
+  /* user-select: none; */
 
   a,
   a:visited {
@@ -23,7 +22,6 @@ export const Wrapper = styled.main`
     color: var(--color, black);
   }
   .App {
-    /* width: 100%; */
     font-size: 1.5rem;
   }
 
@@ -34,7 +32,6 @@ export const Wrapper = styled.main`
   .title .underline {
     width: 6rem;
     height: 0.25rem;
-    /* background: #fc6d27; */
     background: var(--color, black);
     margin-left: auto;
     margin-right: auto;
@@ -50,12 +47,23 @@ export const Wrapper = styled.main`
     z-index: 10;
   }
 
+  .tree {
+  }
   @media screen and (max-width: 800px) {
-    .App {
-      /* min-width: 100%; */
-    }
     .tree {
-      margin-left: 25%;
+      font-size: 1.25rem;
+    }
+
+    .tree__file {
+      white-space: nowrap;
+      width: 300px;
+      overflow-x: scroll;
+      text-overflow: ellipsis;
+    }
+
+    .tree__file::-webkit-scrollbar {
+      max-width: 10px;
+      display: none;
     }
   }
 `;
