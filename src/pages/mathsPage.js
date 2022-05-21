@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper } from "./subjectSyles";
 import Tree from "./../components/Tree/Tree";
+import Yearly from "./paperTest";
 
 export default function App() {
   function file(fileName, fileUrl) {
@@ -79,6 +80,7 @@ export default function App() {
           </Tree>
         </div>
       </div>
+      <Yearly />
     </Wrapper>
   );
 }

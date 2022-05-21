@@ -1,7 +1,7 @@
 import React from "react";
 import Tree from "./../components/Tree/Tree";
 import { Wrapper } from "./subjectSyles";
-import { tt } from "./../components/Tooltip/toolTips";
+import Yearly from "./paperTest";
 
 export default function App() {
   function file(fileName, fileUrl = "#") {
@@ -156,6 +156,7 @@ export default function App() {
           </Tree>
         </div>
       </div>
+      <Yearly />
     </Wrapper>
   );
 }

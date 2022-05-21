@@ -1,6 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Error, PhyPage, ChemPage, MathsPage, Tooltip } from "./pages";
+import {
+  Home,
+  Error,
+  PhyPage,
+  ChemPage,
+  MathsPage,
+  Tooltip,
+  Yearly,
+} from "./pages";
 
 function App() {
   return (
@@ -11,6 +19,7 @@ function App() {
         <Route exact path="/chemistry" element={<ChemPage />} />
         <Route exact path="/maths" element={<MathsPage />} />
         <Route exact path="/tooltip" element={<Tooltip />} />
+        <Route exact path="/yearlytest" element={<Yearly />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
@@ -18,5 +27,3 @@ function App() {
 }
 
 export default App;
-
-// auto copy recording, apperently onclick doesnt work on the tree.file
