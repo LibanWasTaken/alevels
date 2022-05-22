@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Yearly = (customSbjCode) => {
-  const [sbjCode, setSbjCode] = useState(`${customSbjCode}`);
+const Yearly = (props) => {
+  const [sbjCode, setSbjCode] = useState("9701");
   const [variant, setVariant] = useState("");
   const [year, setYear] = useState("");
   const [text, setText] = useState("");
   const [text2, setText2] = useState("");
-  const [batch, setBatch] = useState("s");
   function getBatch() {
     var par = document.getElementsByName("batches")[0];
     var index = par.selectedIndex;
-    return par.options[index].text;
+    var b = par.options[index].text;
+    if (b === "Summer" || !b) {
+      return "s";
+    } else if (b === "Winter") {
+      return "w";
+    } else if (b === "March") {
+      return "m";
+    }
   }
 
   const list = {
@@ -100,7 +106,9 @@ const Yearly = (customSbjCode) => {
   };
 
   function openLink(type) {
-    if (sbjCode === "" || !(sbjCode in list)) {
+    if (!sbjCode) {
+      setSbjCode("9702");
+    } else if (!(sbjCode in list)) {
       setText("Subject code doesn't exist");
     } else if (variant === "") {
       setText("variant empty");
@@ -109,43 +117,31 @@ const Yearly = (customSbjCode) => {
     } else {
       setText("Loading...");
       setText2("(or not I dont know..)");
-
-      if (getBatch() === "Summer") {
-        setBatch("s");
-      } else if (getBatch() === "Winter") {
-        setBatch("w");
-      } else if (getBatch() === "March") {
-        setBatch("m");
-      }
       const url = `https://papers.gceguide.com/A%20Levels/${list[
         parseInt(sbjCode)
       ].replaceAll(
         " ",
         "%20"
-      )}/20${year}/${sbjCode}_${batch}${year}_${type}_${variant}.pdf`;
-
+      )}/20${year}/${sbjCode}_${getBatch()}${year}_${type}_${variant}.pdf`;
       window.open(url);
-
-      console.log(getBatch());
     }
   }
   return (
-    <Wrapper className="page-100">
+    <Wrapper>
       <section>
         <div className="app">
           <div className="row">
-            <h1>Find Papers</h1>
+            <h1>Find Papers:</h1>
             <span>
               <input
                 className="basic-slide"
                 id="sbjCode"
-                // value={"9701"}
                 onChange={(e) => setSbjCode(e.target.value)}
                 type="number"
                 placeholder="9702 / 9691"
                 min="9000"
                 max="9999"
-                defaultValue={"9701"}
+                defaultValue={props.data}
               />
               <label htmlFor="sbjCode">Code</label>
             </span>
@@ -183,14 +179,14 @@ const Yearly = (customSbjCode) => {
             <div className="buttons">
               <button
                 type="submit"
-                className="btn qpBtn"
+                className=" qpBtn"
                 onClick={() => openLink("qp")}
               >
                 search qp
               </button>
               <button
                 type="submit"
-                className="btn msBtn"
+                className=" msBtn"
                 onClick={() => openLink("ms")}
               >
                 search ms
@@ -220,15 +216,38 @@ const Wrapper = styled.main`
   h4 {
     margin-top: 2rem;
   }
-  .btn {
+  button {
     margin: 1rem;
-    font-weight: bold;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
   }
+
   .qpBtn {
+    background-color: white;
+    /* color: #00cca3; */
+    border: 2px #00cca3 solid;
+  }
+  .qpBtn:hover {
     background-color: #00cca3;
+    color: white;
+    transition: 0.25s;
   }
   .msBtn {
+    background-color: white;
+    /* color: #ff5050; */
+    border: 2px #ff5050 solid;
+  }
+  .msBtn:hover {
     background-color: #ff5050;
+    color: white;
+    transition: 0.25s;
   }
 
   #batches {

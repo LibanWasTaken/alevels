@@ -1,7 +1,7 @@
 import React from "react";
 import { Wrapper } from "./subjectSyles";
 import Tree from "./../components/Tree/Tree";
-import Yearly from "./paperTest";
+import Yearly from "./paperSearch";
 
 export default function App() {
   function file(fileName, fileUrl) {
@@ -11,9 +11,10 @@ export default function App() {
       </a>
     );
   }
+  const subjectCode = 9702;
 
   return (
-    <Wrapper color={"#fa1e38"}>
+    <Wrapper color={"#ce2029"}>
       <div className="App">
         <div className="title">
           <h2>Physics</h2>
@@ -94,7 +95,7 @@ export default function App() {
           </Tree>
         </div>
       </div>
-      <Yearly />
+      <Yearly data={subjectCode} />
     </Wrapper>
   );
 }

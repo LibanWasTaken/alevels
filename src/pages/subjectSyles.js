@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.main`
   --color: ${(props) => props.color};
 
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
@@ -18,7 +19,7 @@ export const Wrapper = styled.main`
     white-space: nowrap;
   }
   .link:hover {
-    transition: 0.25s;
+    transition: 0.15s;
     color: var(--color, black);
   }
   .App {

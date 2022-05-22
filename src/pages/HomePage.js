@@ -6,30 +6,30 @@ const HomePage = () => {
   return (
     <Wrapper>
       <ul>
-        <li class="physicsTab">
+        <li className="physicsTab">
           <a href="/physics">
             <h3>Physics</h3>
             <p>Paper 1 &amp; 2, P3 is easy.</p>
-            <i class="fa fa-github">
+            <i className="fa fa-github">
               <FaRocket />
             </i>
           </a>
         </li>
-        <li class="chemistryTab">
+        <li className="chemistryTab">
           <a href="/chemistry">
             <h3>Chemistry</h3>
             <p>I have no idea why tf would you pick this.</p>
-            <i class="fa fa-github">
+            <i className="fa fa-github">
               <FaFlask />
             </i>
           </a>
         </li>
 
-        <li class="mathsTab">
+        <li className="mathsTab">
           <a href="/maths">
             <h3>Maths</h3>
             <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
-            <i class="fa fa-dribbble">
+            <i className="fa fa-dribbble">
               <FaCalculator />
             </i>
           </a>
