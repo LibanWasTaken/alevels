@@ -8,7 +8,6 @@ export const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
-  /* user-select: none; */
 
   a,
   a:visited {
@@ -29,6 +28,7 @@ export const Wrapper = styled.main`
   .title {
     text-align: center;
     margin: 5rem 0;
+    margin-top: 8rem;
   }
   .title .underline {
     width: 6rem;
@@ -53,6 +53,10 @@ export const Wrapper = styled.main`
   @media screen and (max-width: 800px) {
     .tree {
       font-size: 1.25rem;
+    }
+
+    .title {
+      margin: 5rem 0;
     }
 
     .tree__file {

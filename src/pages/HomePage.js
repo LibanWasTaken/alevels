@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaCalculator, FaRocket, FaFlask } from "react-icons/fa";
+import { FaCalculator, FaRocket, FaFlask, FaLaptopCode } from "react-icons/fa";
 
 const HomePage = () => {
   return (
@@ -18,19 +18,27 @@ const HomePage = () => {
         <li className="chemistryTab">
           <a href="/chemistry">
             <h3>Chemistry</h3>
-            <p>I have no idea why tf would you pick this.</p>
+            <p>Why tf would you pick this.</p>
             <i className="fa fa-github">
               <FaFlask />
             </i>
           </a>
         </li>
-
         <li className="mathsTab">
           <a href="/maths">
             <h3>Maths</h3>
             <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
             <i className="fa fa-dribbble">
               <FaCalculator />
+            </i>
+          </a>
+        </li>
+        <li className="computerTab">
+          <a href="/">
+            <h3>Computer</h3>
+            <p>A possilbilty.</p>
+            <i className="fa fa-dribbble">
+              <FaLaptopCode />
             </i>
           </a>
         </li>
@@ -100,7 +108,10 @@ const Wrapper = styled.main`
         background-color: #fc6d27;
       }
       &.physicsTab:hover {
-        background-color: #333;
+        background-color: #ce2029;
+      }
+      &.computerTab:hover {
+        background-color: #009b77;
       }
       &:hover {
         box-shadow: 0 10px 15px 0 #e6e6e6;

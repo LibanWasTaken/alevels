@@ -127,9 +127,9 @@ const Yearly = (props) => {
     }
   }
   return (
-    <Wrapper>
+    <Wrappers>
       <section>
-        <div className="app">
+        <div className="searchApp">
           <div className="row">
             <h1>Find Papers:</h1>
             <span>
@@ -197,11 +197,11 @@ const Yearly = (props) => {
           </div>
         </div>
       </section>
-    </Wrapper>
+    </Wrappers>
   );
 };
 
-const Wrapper = styled.main`
+const Wrappers = styled.main`
   --color: ${(props) => props.color};
   display: flex;
   justify-content: center;
