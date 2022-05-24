@@ -265,10 +265,17 @@ const Wrappers = styled.main`
     cursor: pointer;
   }
 
-  @mixin epic-sides() {
+  .row {
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background: #f5f5f5;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: inherit;
+    text-align: center;
     position: relative;
     z-index: 1;
-
     &:before {
       position: absolute;
       content: "";
@@ -280,18 +287,6 @@ const Wrappers = styled.main`
       z-index: -1;
       @content;
     }
-  }
-  .row {
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 30px;
-    background: #f5f5f5;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    @include epic-sides() {
-      background: inherit;
-    }
-    text-align: center;
   }
   /* FIXME: Maybe these spans are the problem */
   /* TODO: clean up the excess css */
