@@ -21,10 +21,10 @@ const Wrapper = styled.main`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 5rem 0;
   padding: 2rem;
   h1 {
-    font-size: 10rem;
+    font-size: 12rem;
+    margin: 5rem 0 2rem;
   }
   h3 {
     text-transform: none;
@@ -32,6 +32,7 @@ const Wrapper = styled.main`
   }
   .btn {
     margin-top: 5rem;
+    font-size: larger;
   }
 `;
 

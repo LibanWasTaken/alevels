@@ -1,6 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Error, PhyPage, ChemPage, MathsPage, Tooltip } from "./pages";
+import {
+  Home,
+  Error,
+  PhyPage,
+  ChemPage,
+  MathsPage,
+  Tooltip,
+  Critics,
+} from "./pages";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -13,6 +21,7 @@ function App() {
         <Route exact path="/chemistry" element={<ChemPage />} />
         <Route exact path="/maths" element={<MathsPage />} />
         <Route exact path="/tooltip" element={<Tooltip />} />
+        <Route exact path="/critics" element={<Critics />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

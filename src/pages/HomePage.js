@@ -6,12 +6,12 @@ const HomePage = () => {
   return (
     <Wrapper>
       <ul>
-        <li className="physicsTab">
-          <a href="/physics">
-            <h3>Physics</h3>
-            <p>Paper 1 &amp; 2, P3 is easy.</p>
-            <i className="fa fa-github">
-              <FaRocket />
+        <li className="mathsTab">
+          <a href="/maths">
+            <h3>Maths</h3>
+            <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
+            <i className="fa fa-dribbble">
+              <FaCalculator />
             </i>
           </a>
         </li>
@@ -24,12 +24,12 @@ const HomePage = () => {
             </i>
           </a>
         </li>
-        <li className="mathsTab">
-          <a href="/maths">
-            <h3>Maths</h3>
-            <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
-            <i className="fa fa-dribbble">
-              <FaCalculator />
+        <li className="physicsTab">
+          <a href="/physics">
+            <h3>Physics</h3>
+            <p>Paper 1 &amp; 2, P3 is easy.</p>
+            <i className="fa fa-github">
+              <FaRocket />
             </i>
           </a>
         </li>
@@ -53,24 +53,21 @@ const Wrapper = styled.main`
       @content;
     }
   }
-  user-select: none;
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: #f2f2f2;
-    line-height: 1.2;
-  }
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 
   ul {
     width: 60vw;
     padding: 0;
     margin: 0;
     list-style: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
     li {
       border-bottom: 2px solid #e6e6e6;
       position: relative;
@@ -123,7 +120,10 @@ const Wrapper = styled.main`
         }
       }
       &:first-child {
-        border-top: 2px solid #e6e6e6;
+        /* margin-top: 5rem; */
+      }
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
@@ -139,6 +139,14 @@ const Wrapper = styled.main`
       padding: 2rem 0;
       transform: translateY(5px);
       text-align: center;
+    }
+  }
+  @media screen and (max-height: 550px) {
+    @media screen and (orientation: landscape) {
+      align-content: stretch;
+      ul {
+        margin-top: 5rem;
+      }
     }
   }
 `;

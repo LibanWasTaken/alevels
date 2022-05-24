@@ -132,7 +132,7 @@ const Yearly = (props) => {
         <div className="searchApp">
           <div className="row">
             <h1>Find Papers:</h1>
-            <span>
+            <span className="inpSpan">
               <input
                 className="basic-slide"
                 id="sbjCode"
@@ -143,9 +143,9 @@ const Yearly = (props) => {
                 max="9999"
                 defaultValue={props.data}
               />
-              <label htmlFor="sbjCode">Code</label>
+              <label htmlFor="sbjCodes">Code</label>
             </span>
-            <span>
+            <span className="inpSpan">
               <input
                 className="basic-slide"
                 id="variant"
@@ -158,7 +158,7 @@ const Yearly = (props) => {
               />
               <label htmlFor="variant">Variant</label>
             </span>
-            <span>
+            <span className="inpSpan">
               <input
                 className="basic-slide"
                 id="year"
@@ -227,12 +227,14 @@ const Wrappers = styled.main`
     padding: 0.25rem 0.5rem;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
   .qpBtn {
     background-color: white;
-    /* color: #00cca3; */
-    border: 2px #00cca3 solid;
+    color: #00cca3;
+
+    /* border: 2px #00cca3 solid; */
   }
   .qpBtn:hover {
     background-color: #00cca3;
@@ -241,8 +243,8 @@ const Wrappers = styled.main`
   }
   .msBtn {
     background-color: white;
-    /* color: #ff5050; */
-    border: 2px #ff5050 solid;
+    color: #ff5050;
+    /* border: 2px #ff5050 solid; */
   }
   .msBtn:hover {
     background-color: #ff5050;
@@ -290,12 +292,18 @@ const Wrappers = styled.main`
       background: inherit;
     }
     text-align: center;
-
-    span {
-      position: relative;
-      display: inline-block;
-      margin: 20px 10px;
-    }
+  }
+  /* FIXME: Maybe these spans are the problem */
+  /* TODO: clean up the excess css */
+  span {
+    position: relative;
+    display: inline-block;
+    margin: 20px 10px;
+  }
+  .inpSpan {
+    position: relative;
+    display: inline-block;
+    margin: 20px 10px;
   }
   .basic-slide {
     display: inline-block;

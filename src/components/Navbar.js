@@ -39,19 +39,24 @@ const Navbar = () => {
         </div>
         <ul className={showLinks ? "nav-links open" : "nav-links"}>
           <li className={showLinks ? "fade" : ""}>
-            <a href="#">Subjects</a>
+            <a href="/">Subjects</a>
           </li>
           <li className={showLinks ? "fade" : ""}>
-            <a href="#">Solutions</a>
+            <a href="#">Themes</a>
           </li>
           <li className={showLinks ? "fade" : ""}>
-            <a href="#">Products</a>
+            <a href="/critics">Critics</a>
           </li>
           <li className={showLinks ? "fade" : ""}>
-            <a href="#">Services</a>
+            <a href="#">Something</a>
           </li>
           <li className={showLinks ? "fade" : ""}>
-            <a href="#">Contact Us</a>
+            <a
+              href="https://www.youtube.com/watch?v=d1YBv2mWll0"
+              target="_blank"
+            >
+              Contact Me
+            </a>
           </li>
 
           {/* <li>
@@ -192,7 +197,7 @@ const Wrapper = styled.section`
     width: 100%;
     flex-direction: column;
     clip-path: circle(50px at 90% -20%);
-    -webkit-clip-path: circle(50px at 90% -10%);
+    -webkit-clip-path: circle(50px at 90% -20%);
     transition: all 0.5s ease-out;
     pointer-events: none;
   }
