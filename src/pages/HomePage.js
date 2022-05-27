@@ -4,46 +4,50 @@ import { FaCalculator, FaRocket, FaFlask, FaLaptopCode } from "react-icons/fa";
 
 const HomePage = () => {
   return (
-    <Wrapper>
-      <ul>
-        <li className="mathsTab">
-          <a href="/maths">
-            <h3>Maths</h3>
-            <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
-            <i className="fa fa-dribbble">
-              <FaCalculator />
-            </i>
-          </a>
-        </li>
-        <li className="chemistryTab">
-          <a href="/chemistry">
-            <h3>Chemistry</h3>
-            <p>Why tf would you pick this.</p>
-            <i className="fa fa-github">
-              <FaFlask />
-            </i>
-          </a>
-        </li>
-        <li className="physicsTab">
-          <a href="/physics">
-            <h3>Physics</h3>
-            <p>Paper 1 &amp; 2, P3 is easy.</p>
-            <i className="fa fa-github">
-              <FaRocket />
-            </i>
-          </a>
-        </li>
-        <li className="computerTab">
-          <a href="/">
-            <h3>Computer</h3>
-            <p>A possilbilty.</p>
-            <i className="fa fa-dribbble">
-              <FaLaptopCode />
-            </i>
-          </a>
-        </li>
-      </ul>
-    </Wrapper>
+    <Theme>
+      <div className={localStorage.getItem("theme")}>
+        <Wrapper>
+          <ul>
+            <li className="mathsTab">
+              <a href="/maths">
+                <h3>Maths</h3>
+                <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
+                <i className="fa fa-dribbble">
+                  <FaCalculator />
+                </i>
+              </a>
+            </li>
+            <li className="chemistryTab">
+              <a href="/chemistry">
+                <h3>Chemistry</h3>
+                <p>Why tf would you pick this.</p>
+                <i className="fa fa-github">
+                  <FaFlask />
+                </i>
+              </a>
+            </li>
+            <li className="physicsTab">
+              <a href="/physics">
+                <h3>Physics</h3>
+                <p>Paper 1 &amp; 2, P3 is easy.</p>
+                <i className="fa fa-github">
+                  <FaRocket />
+                </i>
+              </a>
+            </li>
+            <li className="computerTab">
+              <a href="/">
+                <h3>Computer</h3>
+                <p>A possilbilty.</p>
+                <i className="fa fa-dribbble">
+                  <FaLaptopCode />
+                </i>
+              </a>
+            </li>
+          </ul>
+        </Wrapper>
+      </div>
+    </Theme>
   );
 };
 
@@ -147,6 +151,25 @@ const Wrapper = styled.main`
       ul {
         margin-top: 5rem;
       }
+    }
+  }
+
+  /* theming */
+`;
+
+const Theme = styled.main`
+  .dark {
+    transition: 2s;
+    background-color: #333;
+    h3,
+    i {
+      color: white;
+    }
+    p {
+      color: #f2f5f7;
+    }
+    li:hover {
+      box-shadow: 0 0px 5px 0 #e6e6e6;
     }
   }
 `;

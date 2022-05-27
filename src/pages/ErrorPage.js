@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const ErrorPage = () => {
+  function handleClick() {
+    console.log(localStorage.getItem("theme"));
+  }
+
   return (
     <Wrapper className="page-100">
       <section>
@@ -10,6 +14,9 @@ const ErrorPage = () => {
         <Link to="/" className="btn">
           go back home twat
         </Link>
+        <div className="btn" onClick={handleClick}>
+          mode test
+        </div>
       </section>
     </Wrapper>
   );

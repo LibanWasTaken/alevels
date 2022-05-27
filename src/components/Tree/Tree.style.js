@@ -46,7 +46,8 @@ export const ActionsWrapper = styled.div`
 `;
 
 export const StyledName = styled.div`
-  background-color: white;
+  background-color: ${() =>
+    localStorage.getItem("theme") === "light" ? "white" : "#333"};
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -69,7 +70,9 @@ export const VerticalLine = styled.section`
     left: 1px;
     width: 0;
     height: 100%;
-    border: 1px solid #dbdbdd;
+    /* border: 1px solid #dbdbdd; */
+    border: 1px solid
+      ${() => (localStorage.getItem("theme") === "light" ? "#dbdbdd" : "red")};
     z-index: -1;
   }
 `;

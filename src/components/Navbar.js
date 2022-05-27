@@ -1,65 +1,53 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
-import testLogo from "./../assets/testLogo.png";
-
-// const links = [
-//   {
-//     id: 1,
-//     url: "/",
-//     text: "home",
-//   },
-//   {
-//     id: 2,
-//     url: "/tokens",
-//     text: "tokens",
-//   },
-//   {
-//     id: 3,
-//     url: "/sites",
-//     text: "sites",
-//   },
-// ];
+import DarkMode from "./Darkmode";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [theme, setTheme] = useState("dark");
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
 
   return (
-    <Wrapper>
-      <nav>
-        <div
-          className={showLinks ? "hamburger toggle" : "hamburger"}
-          onClick={toggleLinks}
-        >
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
-        <ul className={showLinks ? "nav-links open" : "nav-links"}>
-          <li className={showLinks ? "fade" : ""}>
-            <a href="/">Subjects</a>
-          </li>
-          <li className={showLinks ? "fade" : ""}>
-            <a href="#">Themes</a>
-          </li>
-          <li className={showLinks ? "fade" : ""}>
-            <a href="/critics">Critics</a>
-          </li>
-          <li className={showLinks ? "fade" : ""}>
-            <a href="#">Something</a>
-          </li>
-          <li className={showLinks ? "fade" : ""}>
-            <a
-              href="https://www.youtube.com/watch?v=d1YBv2mWll0"
-              target="_blank"
+    <Theme>
+      <div className={localStorage.getItem("theme")}>
+        <Wrapper>
+          <nav>
+            <div
+              className={showLinks ? "hamburger toggle" : "hamburger"}
+              onClick={toggleLinks}
             >
-              Contact Me
-            </a>
-          </li>
+              <div className="line1"></div>
+              <div className="line2"></div>
+              <div className="line3"></div>
+            </div>
+            <ul className={showLinks ? "nav-links open" : "nav-links"}>
+              <li className={showLinks ? "fade" : ""}>
+                <a href="/">Subjects</a>
+              </li>
+              <li className={showLinks ? "fade" : ""}>
+                {/* <a href="#" onClick={switchTheme}>
+              {theme} Mode
+            </a> */}
+                <DarkMode />
+              </li>
+              <li className={showLinks ? "fade" : ""}>
+                <a href="/critics">Critics</a>
+              </li>
+              <li className={showLinks ? "fade" : ""}>
+                <a href="#">Something</a>
+              </li>
+              <li className={showLinks ? "fade" : ""}>
+                <a
+                  href="https://www.youtube.com/watch?v=d1YBv2mWll0"
+                  target="_blank"
+                >
+                  Contact Me
+                </a>
+              </li>
 
-          {/* <li>
+              {/* <li>
             <button className="login-button" href="#">
               Login
             </button>
@@ -69,9 +57,11 @@ const Navbar = () => {
               Join
             </button>
           </li> */}
-        </ul>
-      </nav>
-    </Wrapper>
+            </ul>
+          </nav>
+        </Wrapper>
+      </div>
+    </Theme>
   );
 };
 
@@ -198,10 +188,15 @@ const Wrapper = styled.section`
     flex-direction: column;
     clip-path: circle(50px at 90% -20%);
     -webkit-clip-path: circle(50px at 90% -20%);
+    /* clip-path: circle(50px at 92% 5%);
+    -webkit-clip-path: circle(50px at 92% 5%); 
+    transition: all 0.5s ease-out, opacity 0.2s;
+     opacity: 0; */
     transition: all 0.5s ease-out;
     pointer-events: none;
   }
   .nav-links.open {
+    opacity: 1;
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
@@ -259,6 +254,31 @@ const Wrapper = styled.section`
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
     background-color: #f2f5f7;
+  }
+`;
+
+const Theme = styled.main`
+  .dark {
+    transition: 2s;
+    * {
+      color: #333;
+    }
+    .hamburger div {
+      background: #f2f5f7;
+    }
+    .nav-links {
+      background-color: hsla(0, 0%, 80%, 0.95);
+    }
+    .nav-links li a::before {
+      background-color: #333;
+    }
+
+    .toggle .line1 {
+      background-color: #333;
+    }
+    .toggle .line3 {
+      background-color: #333;
+    }
   }
 `;
 

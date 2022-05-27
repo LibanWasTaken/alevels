@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+
 import {
   AiOutlineFolderAdd,
   AiOutlineFileAdd,
@@ -21,10 +23,14 @@ import { useTreeContext } from "./../state/TreeContext";
 import { PlaceholderInput } from "./../TreePlaceholderInput";
 
 const FolderName = ({ isOpen, name, handleClick }) => (
-  <StyledName onClick={handleClick}>
-    {isOpen ? <AiOutlineFolderOpen /> : <AiOutlineFolder />}
-    &nbsp;&nbsp;{name}
-  </StyledName>
+  <Theme>
+    <div className={localStorage.getItem("theme")}>
+      <StyledName onClick={handleClick}>
+        {isOpen ? <AiOutlineFolderOpen /> : <AiOutlineFolder />}
+        &nbsp;&nbsp;{name}
+      </StyledName>
+    </div>
+  </Theme>
 );
 
 const Folder = ({ id, name, children, node }) => {
@@ -131,5 +137,11 @@ const Folder = ({ id, name, children, node }) => {
     </StyledFolder>
   );
 };
+
+const Theme = styled.main`
+  .dark {
+    background-color: red;
+  }
+`;
 
 export { Folder, FolderName };

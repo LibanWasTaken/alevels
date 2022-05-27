@@ -72,3 +72,21 @@ export const Wrapper = styled.main`
     }
   }
 `;
+
+export const Theme = styled.main`
+  .dark {
+    overflow: hidden;
+    background-color: #333;
+    * {
+      color: #f2f5f7;
+    }
+    .title {
+      /* color: var(--color, #f2f5f7); */
+      color: #f2f5f7;
+    }
+    .tree {
+      /* color: #f2f5f7; */
+      /* background-color: red; */
+    }
+  }
+`;
