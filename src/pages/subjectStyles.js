@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.main`
   --color: ${(props) => props.color};
 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,6 +77,8 @@ export const Wrapper = styled.main`
 export const Theme = styled.main`
   .dark {
     overflow: hidden;
+    margin: auto;
+
     background-color: #333;
     * {
       color: #f2f5f7;
@@ -90,3 +93,6 @@ export const Theme = styled.main`
     }
   }
 `;
+
+// FIXME: tree.style.js er last e jetia, z-index is the problem
+// TODO: .dark er background-color is the issue

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Yearly = (props) => {
-  const [sbjCode, setSbjCode] = useState("9701");
+  const [sbjCode, setSbjCode] = useState(props.data);
   const [variant, setVariant] = useState("");
   const [year, setYear] = useState("");
   const [text, setText] = useState("");
@@ -107,7 +107,7 @@ const Yearly = (props) => {
 
   function openLink(type) {
     if (!sbjCode) {
-      setSbjCode("9702");
+      setSbjCode(props.data);
     } else if (!(sbjCode in list)) {
       setText("Subject code doesn't exist");
     } else if (variant === "") {
@@ -127,77 +127,81 @@ const Yearly = (props) => {
     }
   }
   return (
-    <Wrappers>
-      <section>
-        <div className="searchApp">
-          <div className="row">
-            <h1>Find Papers:</h1>
-            <span className="inpSpan">
-              <input
-                className="basic-slide"
-                id="sbjCode"
-                onChange={(e) => setSbjCode(e.target.value)}
-                type="number"
-                placeholder="9702 / 9691"
-                min="9000"
-                max="9999"
-                defaultValue={props.data}
-              />
-              <label htmlFor="sbjCodes">Code</label>
-            </span>
-            <span className="inpSpan">
-              <input
-                className="basic-slide"
-                id="variant"
-                value={variant}
-                onChange={(e) => setVariant(e.target.value)}
-                type="number"
-                placeholder="21 / 12 / 11"
-                min={11}
-                max={43}
-              />
-              <label htmlFor="variant">Variant</label>
-            </span>
-            <span className="inpSpan">
-              <input
-                className="basic-slide"
-                id="year"
-                value={year}
-                onChange={(e) => setYear(e.target.value)}
-                type="number"
-                placeholder="09 / 17 / 21"
-                min="1"
-                max="21"
-              />
-              <label htmlFor="year">Year</label>
-            </span>
-            <select name="batches" id="batches">
-              <option value="summer">Summer</option>
-              <option value="winter">Winter</option>
-              <option value="march">March</option>
-            </select>
-            <div className="buttons">
-              <button
-                type="submit"
-                className=" qpBtn"
-                onClick={() => openLink("qp")}
-              >
-                search qp
-              </button>
-              <button
-                type="submit"
-                className=" msBtn"
-                onClick={() => openLink("ms")}
-              >
-                search ms
-              </button>
+    <Theme>
+      <div className={localStorage.getItem("theme")}>
+        <Wrappers>
+          <section>
+            <div className="searchApp">
+              <div className="row">
+                <h1>Find Papers:</h1>
+                <span className="inpSpan">
+                  <input
+                    className="basic-slide"
+                    id="sbjCode"
+                    onChange={(e) => setSbjCode(e.target.value)}
+                    type="number"
+                    placeholder="9702 / 9691"
+                    min="9000"
+                    max="9999"
+                    defaultValue={props.data}
+                  />
+                  <label htmlFor="sbjCodes">Code</label>
+                </span>
+                <span className="inpSpan">
+                  <input
+                    className="basic-slide"
+                    id="variant"
+                    value={variant}
+                    onChange={(e) => setVariant(e.target.value)}
+                    type="number"
+                    placeholder="21 / 12 / 11"
+                    min={11}
+                    max={43}
+                  />
+                  <label htmlFor="variant">Variant</label>
+                </span>
+                <span className="inpSpan">
+                  <input
+                    className="basic-slide"
+                    id="year"
+                    value={year}
+                    onChange={(e) => setYear(e.target.value)}
+                    type="number"
+                    placeholder="09 / 17 / 21"
+                    min="1"
+                    max="21"
+                  />
+                  <label htmlFor="year">Year</label>
+                </span>
+                <select name="batches" id="batches">
+                  <option value="summer">Summer</option>
+                  <option value="winter">Winter</option>
+                  <option value="march">March</option>
+                </select>
+                <div className="buttons">
+                  <button
+                    type="submit"
+                    className=" qpBtn"
+                    onClick={() => openLink("qp")}
+                  >
+                    search qp
+                  </button>
+                  <button
+                    type="submit"
+                    className=" msBtn"
+                    onClick={() => openLink("ms")}
+                  >
+                    search ms
+                  </button>
+                </div>
+                <h4>{text}</h4>
+                <h6>{text2}</h6>
+              </div>
             </div>
-            <h4>{text}</h4>
-            <h6>{text2}</h6>
-          </div>
-        </div>
-      </section>
-    </Wrappers>
+          </section>
+        </Wrappers>
+      </div>
+    </Theme>
   );
 };
 
@@ -224,10 +228,10 @@ const Wrappers = styled.main`
     font-size: 1rem;
     border: none;
     outline: none;
-    padding: 0.25rem 0.5rem;
-    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 1px 8px 0px;
   }
 
   .qpBtn {
@@ -270,9 +274,8 @@ const Wrappers = styled.main`
     max-width: 800px;
     margin: 0 auto;
     padding: 60px 30px;
-    background: #f5f5f5;
+    background: #f7f7f7;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background: inherit;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -294,6 +297,7 @@ const Wrappers = styled.main`
     position: relative;
     display: inline-block;
     margin: 20px 10px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 1px 8px 0px;
   }
   .inpSpan {
     position: relative;
@@ -361,6 +365,31 @@ const Wrappers = styled.main`
 
   #variant {
     padding-left: 30px;
+  }
+`;
+
+const Theme = styled.main`
+  .dark {
+    overflow: hidden;
+    .row {
+      background-color: #444;
+    }
+    input,
+    select,
+    option {
+      color: black;
+    }
+    .basic-slide {
+      &::-webkit-input-placeholder {
+        color: #888;
+      }
+    }
+    .basic-slide:focus,
+    .basic-slide:active {
+      &::-webkit-input-placeholder {
+        color: #777;
+      }
+    }
   }
 `;
 

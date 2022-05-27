@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 
 export const StyledTree = styled.div`
   line-height: 1.75;
-  z-index: 1;
+  z-index: 2;
 
   .tree__input {
     width: auto;
@@ -46,6 +46,9 @@ export const ActionsWrapper = styled.div`
 `;
 
 export const StyledName = styled.div`
+  z-index: 2;
+  /* margin-left: 1rem; */
+
   background-color: ${() =>
     localStorage.getItem("theme") === "light" ? "white" : "#333"};
   display: flex;
@@ -54,6 +57,8 @@ export const StyledName = styled.div`
 `;
 
 export const Collapse = styled.div`
+  z-index: 2;
+
   height: max-content;
   max-height: ${(p) => (p.isOpen ? "800px" : "0px")};
   overflow: hidden;
@@ -66,13 +71,14 @@ export const VerticalLine = styled.section`
     content: "";
     display: block;
     position: absolute;
-    top: -2px; /* just to hide 1px peek */
+    /* top: -30px; just to hide 1px peek */
     left: 1px;
     width: 0;
     height: 100%;
     /* border: 1px solid #dbdbdd; */
     border: 1px solid
-      ${() => (localStorage.getItem("theme") === "light" ? "#dbdbdd" : "red")};
-    z-index: -1;
+      ${() =>
+        localStorage.getItem("theme") === "light" ? "#dbdbdd" : "#f2f5f7"};
+    z-index: 0;
   }
 `;

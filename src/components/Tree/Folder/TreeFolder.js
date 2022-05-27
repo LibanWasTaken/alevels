@@ -23,14 +23,10 @@ import { useTreeContext } from "./../state/TreeContext";
 import { PlaceholderInput } from "./../TreePlaceholderInput";
 
 const FolderName = ({ isOpen, name, handleClick }) => (
-  <Theme>
-    <div className={localStorage.getItem("theme")}>
-      <StyledName onClick={handleClick}>
-        {isOpen ? <AiOutlineFolderOpen /> : <AiOutlineFolder />}
-        &nbsp;&nbsp;{name}
-      </StyledName>
-    </div>
-  </Theme>
+  <StyledName onClick={handleClick}>
+    {isOpen ? <AiOutlineFolderOpen /> : <AiOutlineFolder />}
+    &nbsp;&nbsp;{name}
+  </StyledName>
 );
 
 const Folder = ({ id, name, children, node }) => {
@@ -137,11 +133,5 @@ const Folder = ({ id, name, children, node }) => {
     </StyledFolder>
   );
 };
-
-const Theme = styled.main`
-  .dark {
-    background-color: red;
-  }
-`;
 
 export { Folder, FolderName };

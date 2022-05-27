@@ -1,8 +1,19 @@
-import React from "react";
+import { React, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 
 export default function ContactUs() {
+  const [end, setEnd] = useState("");
+
+  function ending(e) {
+    e.preventDefault();
+
+    setEnd(true);
+    setTimeout(() => {
+      window.location.replace("/");
+    }, 3000);
+  }
+
   function sendEmail(e) {
     e.preventDefault();
 
@@ -21,7 +32,8 @@ export default function ContactUs() {
           console.log(error.text);
         }
       );
-    e.target.reset();
+    // e.target.reset();
+    ending(e);
   }
 
   return (
@@ -29,48 +41,57 @@ export default function ContactUs() {
       <div class="container">
         <form onSubmit={sendEmail} id="contact">
           <h3>Critics Form</h3>
-          <h4>
-            Write anything you want honestly <br />
-            dont spam
-          </h4>
-          <fieldset>
-            <input
-              placeholder="Your name"
-              type="text"
-              tabindex="1"
-              required
-              autofocus
-              name="name"
-            />
-          </fieldset>
-          <fieldset>
-            <input
-              placeholder="Your Email Address (optional)"
-              type="email"
-              tabindex="2"
-              name="email"
-            />
-          </fieldset>
+          {end ? (
+            <h4>
+              "Thanks" for the submission <br />
+              You'll be redirected in 3..2..
+            </h4>
+          ) : (
+            <h4>
+              Write anything you want honestly <br />
+              dont spam
+            </h4>
+          )}
 
-          <fieldset>
-            <textarea
-              placeholder="Type your message here..."
-              tabindex="5"
-              name="message"
-              required
-            ></textarea>
-          </fieldset>
-          <fieldset>
-            <button
-              name="submit"
-              type="submit"
-              id="contact-submit"
-              data-submit="...Sending"
-              value="Send Message"
-            >
-              Submit
-            </button>
-          </fieldset>
+          <div className={end ? "hidden" : ""}>
+            <fieldset>
+              <input
+                placeholder="Your name"
+                type="text"
+                tabindex="1"
+                required
+                autofocus
+                name="name"
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                placeholder="Your Email Address (optional)"
+                type="email"
+                tabindex="2"
+                name="email"
+              />
+            </fieldset>
+            <fieldset>
+              <textarea
+                placeholder="Type your message here..."
+                tabindex="5"
+                name="message"
+                required
+              ></textarea>
+            </fieldset>
+            <fieldset>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                data-submit="...Sending"
+                value="Send Message"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </div>
         </form>
       </div>
     </Wrapper>
@@ -91,6 +112,10 @@ const Wrapper = styled.main`
     padding: 0;
     box-sizing: border-box;
     font-family: Poppins;
+  }
+
+  .hidden {
+    display: none;
   }
 
   body {
