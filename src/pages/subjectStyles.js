@@ -79,9 +79,14 @@ export const Theme = styled.main`
     overflow: hidden;
     margin: auto;
 
-    background-color: #333;
-    * {
+    background-color: #010409;
+    .tree,
+    .link {
       color: #f2f5f7;
+    }
+    .link:hover {
+      transition: 0.15s;
+      color: var(--color, black);
     }
     .title {
       /* color: var(--color, #f2f5f7); */
@@ -93,6 +98,3 @@ export const Theme = styled.main`
     }
   }
 `;
-
-// FIXME: tree.style.js er last e jetia, z-index is the problem
-// TODO: .dark er background-color is the issue

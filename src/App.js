@@ -8,6 +8,10 @@ import {
   MathsPage,
   Tooltip,
   Critics,
+  Olevels,
+  Ochempage,
+  Oaddpage,
+  Odpage,
 } from "./pages";
 import Navbar from "./components/Navbar";
 
@@ -22,6 +26,10 @@ function App() {
         <Route exact path="/maths" element={<MathsPage />} />
         <Route exact path="/tooltip" element={<Tooltip />} />
         <Route exact path="/critics" element={<Critics />} />
+        <Route exact path="/olevels" element={<Olevels />} />
+        <Route exact path="/olevels/chemistry" element={<Ochempage />} />
+        <Route exact path="/olevels/addmaths" element={<Oaddpage />} />
+        <Route exact path="/olevels/mathsd" element={<Odpage />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

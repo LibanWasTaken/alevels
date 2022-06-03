@@ -36,7 +36,7 @@ const Navbar = () => {
                 <a href="/critics">Critics</a>
               </li>
               <li className={showLinks ? "fade" : ""}>
-                <a href="#">Nothing</a>
+                <a href="/olevels">O levels</a>
               </li>
               <li className={showLinks ? "fade" : ""}>
                 <a

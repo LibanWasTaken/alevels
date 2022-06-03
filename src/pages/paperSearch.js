@@ -39,7 +39,6 @@ const Yearly = (props) => {
     8681: "Chinese - Language (AS Level only) (8681)",
     9274: "Classical Studies (9274)",
     9608: "Computer Science (9608)",
-    9608: "Computer Science (for final examination in 2021) (9608)",
     9618: "Computer Science (for first examination in 2021) (9618)",
     9691: "Computing (9691)",
     9631: "Design & Textiles (9631)",
@@ -103,6 +102,58 @@ const Yearly = (props) => {
     9395: "Travel and Tourism (9395)",
     9676: "Urdu (A Level only) (9676)",
     9686: "Urdu - Pakistan only (A Level only) (9686) ",
+
+    7707: "Accounting (7707)",
+    5038: "Agriculture (5038)",
+    3180: "Arabic (3180)",
+    6090: "Art & Design (6090)",
+    7094: "Bangladesh Studies (7094)",
+    3204: "Bengali (3204)",
+    5090: "Biology (5090)",
+    7115: "Business Studies (7115)",
+    5070: "Chemistry (5070)",
+    7100: "Commerce (7100)",
+    7101: "Commercial Studies (7101)",
+    2210: "Computer Science (2210)",
+    7010: "Computer Studies (7010)",
+    7048: "Design and Communication (7048)",
+    6043: "Design and Technology (6043)",
+    2281: "Economics (2281)",
+    1123: "English (1123)",
+    5014: "Environmental Management (5014)",
+    6130: "Fashion and Textiles (6130)",
+    6065: "Food and Nutrition (6065)",
+    3015: "French (3015)",
+    2217: "Geography (2217)",
+    3025: "German (3025)",
+    2069: "Global Perspectives (2069)",
+    2055: "Hinduism (2055)",
+    2147: "History (2147)",
+    2134: "History (Modern World Affairs) (2134)",
+    2158: "History World Affairs, 1917-1991 (2158)",
+    2056: "Islamic Religion and Culture (2056)",
+    2068: "Islamic Studies (2068)",
+    2058: "Islamiyat (2058)",
+    2010: "Literature in English (2010)",
+    5180: "Marine Science (5180)",
+    4037: "Mathematics - Additional (4037)",
+    4024: "Mathematics D (4024)",
+    3202: "Nepali (3202)",
+    2059: "Pakistan Studies (2059)",
+    5054: "Physics (5054)",
+    7110: "Principles of Accounts (7110)",
+    2048: "Religious Studies (2048)",
+    5129: "Science - Combined (5129)",
+    3158: "Setswana (3158)",
+    3205: "Sinhala (3205)",
+    2251: "Sociology (2251)",
+    3035: "Spanish (3035)",
+    4040: "Statistics (4040)",
+    3162: "Swahili (3162)",
+    3226: "Tamil (3226)",
+    7096: "Travel and Tourism (7096)",
+    3247: "Urdu - First Language (3247)",
+    3248: "Urdu - Second Language (3248)",
   };
 
   function openLink(type) {
@@ -117,12 +168,14 @@ const Yearly = (props) => {
     } else {
       setText("Loading...");
       setText2("(or not I dont know..)");
-      const url = `https://papers.gceguide.com/A%20Levels/${list[
-        parseInt(sbjCode)
-      ].replaceAll(
+
+      const url = `https://papers.gceguide.com/${
+        parseInt(sbjCode) < 8000 ? "O" : "A"
+      }%20Levels/${list[parseInt(sbjCode)].replaceAll(
         " ",
         "%20"
       )}/20${year}/${sbjCode}_${getBatch()}${year}_${type}_${variant}.pdf`;
+
       window.open(url);
     }
   }
@@ -194,8 +247,8 @@ const Yearly = (props) => {
                     search ms
                   </button>
                 </div>
-                <h4>{text}</h4>
-                <h6>{text2}</h6>
+                {/* <h4>{text}</h4>
+                <h6>{text2}</h6> */}
               </div>
             </div>
           </section>
@@ -371,8 +424,11 @@ const Wrappers = styled.main`
 const Theme = styled.main`
   .dark {
     overflow: hidden;
+    h1 {
+      color: white;
+    }
     .row {
-      background-color: #444;
+      background-color: #161b22;
     }
     input,
     select,

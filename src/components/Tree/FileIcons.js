@@ -5,6 +5,7 @@ import {
   FaVideo,
   FaRegLightbulb,
   FaDropbox,
+  FaGoogleDrive,
 } from "react-icons/fa";
 
 const FILE_ICONS = {
@@ -16,6 +17,7 @@ const FILE_ICONS = {
   zoom: <FaVideo />,
   tip: <FaRegLightbulb />,
   dropbox: <FaDropbox />,
+  drive: <FaGoogleDrive />,
 };
 
 export default FILE_ICONS;

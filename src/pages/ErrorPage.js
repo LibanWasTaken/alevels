@@ -2,23 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const ErrorPage = () => {
-  function handleClick() {
-    console.log(localStorage.getItem("theme"));
-  }
-
   return (
-    <Wrapper className="page-100">
-      <section>
-        <h1>404</h1>
-        <h3>Sorry, wtf are you doing here</h3>
-        <Link to="/" className="btn">
-          go back home twat
-        </Link>
-        <div className="btn" onClick={handleClick}>
-          mode test
-        </div>
-      </section>
-    </Wrapper>
+    <Theme>
+      <div className={localStorage.getItem("theme")}>
+        <Wrapper className="page-100">
+          <section>
+            <h1>404</h1>
+            <h3>Sorry, wtf are you doing here</h3>
+            <Link to="/" className="btn">
+              go back home twat
+            </Link>
+          </section>
+        </Wrapper>
+      </div>
+    </Theme>
   );
 };
 
@@ -29,6 +26,7 @@ const Wrapper = styled.main`
   align-items: center;
   text-align: center;
   padding: 2rem;
+  height: 100vh;
   h1 {
     font-size: 12rem;
     margin: 5rem 0 2rem;
@@ -40,6 +38,15 @@ const Wrapper = styled.main`
   .btn {
     margin-top: 5rem;
     font-size: larger;
+  }
+`;
+
+const Theme = styled.main`
+  .dark {
+    color: whitesmoke;
+    .page-100 {
+      background-color: #010409;
+    }
   }
 `;
 

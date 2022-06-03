@@ -1,46 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-import { FaCalculator, FaRocket, FaFlask, FaLaptopCode } from "react-icons/fa";
+import { FaSquareRootAlt, FaRocket, FaFlask, FaShapes } from "react-icons/fa";
 
-const HomePage = () => {
+const Olevels = () => {
   return (
     <Theme>
       <div className={localStorage.getItem("theme")}>
         <Wrapper>
           <ul>
-            <li className="mathsTab">
-              <a href="/maths">
-                <h3>Maths</h3>
-                <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
+            <li className="addmathsTab">
+              <a href="/olevels/addmaths">
+                <h3>Add Maths</h3>
+                <p> Pure Mathematics basics</p>
                 <i className="fa fa-dribbble">
-                  <FaCalculator />
+                  <FaSquareRootAlt />
                 </i>
               </a>
             </li>
             <li className="chemistryTab">
-              <a href="/chemistry">
+              <a href="/olevels/chemistry">
                 <h3>Chemistry</h3>
-                <p>Why tf would you pick this.</p>
+                <p>And so it begins.</p>
                 <i className="fa fa-github">
                   <FaFlask />
                 </i>
               </a>
             </li>
-            <li className="physicsTab">
-              <a href="/physics">
-                <h3>Physics</h3>
-                <p>Paper 1 &amp; 2, P3 is easy.</p>
-                <i className="fa fa-github">
-                  <FaRocket />
-                </i>
-              </a>
-            </li>
-            <li className="computerTab">
-              <a href="/">
-                <h3>Computer</h3>
-                <p>A possilbilty.</p>
+
+            <li className="mathsTab">
+              <a href="/olevels/mathsd">
+                <h3>Maths D</h3>
+                <p>Deez nuts</p>
                 <i className="fa fa-dribbble">
-                  <FaLaptopCode />
+                  <FaShapes />
                 </i>
               </a>
             </li>
@@ -104,6 +96,9 @@ const Wrapper = styled.main`
       }
       &.mathsTab:hover {
         background-color: #55acee;
+      }
+      &.addmathsTab:hover {
+        background-color: #5560ee;
       }
       &.chemistryTab:hover {
         background-color: #fc6d27;
@@ -174,4 +169,4 @@ const Theme = styled.main`
   }
 `;
 
-export default HomePage;
+export default Olevels;

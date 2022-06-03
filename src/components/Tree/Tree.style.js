@@ -50,7 +50,7 @@ export const StyledName = styled.div`
   /* margin-left: 1rem; */
 
   background-color: ${() =>
-    localStorage.getItem("theme") === "light" ? "white" : "#333"};
+    localStorage.getItem("theme") === "light" ? "white" : "#010409"};
   display: flex;
   align-items: center;
   cursor: pointer;
