@@ -45,7 +45,7 @@ const Theme = styled.main`
   .dark {
     color: whitesmoke;
     .page-100 {
-      background-color: #010409;
+      background-color: #222;
     }
   }
 `;

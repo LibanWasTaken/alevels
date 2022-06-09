@@ -50,7 +50,7 @@ export const StyledName = styled.div`
   /* margin-left: 1rem; */
 
   background-color: ${() =>
-    localStorage.getItem("theme") === "light" ? "white" : "#010409"};
+    localStorage.getItem("theme") === "light" ? "white" : "#222"};
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -76,7 +76,7 @@ export const VerticalLine = styled.section`
     width: 0;
     height: 100%;
     /* border: 1px solid #dbdbdd; */
-    border: 1px solid
+    border: 0.1px solid
       ${() =>
         localStorage.getItem("theme") === "light" ? "#dbdbdd" : "#f2f5f7"};
     z-index: 0;

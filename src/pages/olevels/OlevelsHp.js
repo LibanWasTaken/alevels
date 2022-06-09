@@ -101,7 +101,7 @@ const Wrapper = styled.main`
         background-color: #5560ee;
       }
       &.chemistryTab:hover {
-        background-color: #fc6d27;
+        background-color: #00ba1a;
       }
       &.physicsTab:hover {
         background-color: #ce2029;
@@ -155,7 +155,7 @@ const Wrapper = styled.main`
 const Theme = styled.main`
   .dark {
     transition: 2s;
-    background-color: #010409;
+    background-color: #222;
     h3,
     i {
       color: white;

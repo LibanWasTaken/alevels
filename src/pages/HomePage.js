@@ -36,7 +36,7 @@ const HomePage = () => {
               </a>
             </li>
             <li className="computerTab">
-              <a href="/">
+              <a href="/computer">
                 <h3>Computer</h3>
                 <p>A possilbilty.</p>
                 <i className="fa fa-dribbble">
@@ -160,7 +160,7 @@ const Wrapper = styled.main`
 const Theme = styled.main`
   .dark {
     transition: 2s;
-    background-color: #010409;
+    background-color: #222;
     h3,
     i {
       color: white;

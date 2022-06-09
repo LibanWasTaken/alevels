@@ -79,7 +79,7 @@ export const Theme = styled.main`
     overflow: hidden;
     margin: auto;
 
-    background-color: #010409;
+    background-color: #222;
     .tree,
     .link {
       color: #f2f5f7;

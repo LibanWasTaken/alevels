@@ -384,7 +384,7 @@ const Wrappers = styled.main`
       position: absolute;
       top: 0;
       left: 0;
-      padding: 10px 15px;
+      padding: 8.6px 15px;
       text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
       background: var(--color, #7ab893);
       transition: all 0.3s ease-in-out;
@@ -419,6 +419,11 @@ const Wrappers = styled.main`
   #variant {
     padding-left: 30px;
   }
+  @media screen and (max-width: 800px) {
+    .basic-slide + label {
+      padding: 10px 15px;
+    }
+  }
 `;
 
 const Theme = styled.main`
@@ -428,10 +433,17 @@ const Theme = styled.main`
       color: white;
     }
     .row {
-      background-color: #161b22;
+      background-color: #333;
+    }
+    select {
+      background-color: #444;
+      color: white;
+    }
+
+    button {
+      background-color: #444;
     }
     input,
-    select,
     option {
       color: black;
     }

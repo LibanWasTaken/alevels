@@ -1,17 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import {
   Home,
   Error,
   PhyPage,
   ChemPage,
   MathsPage,
-  Tooltip,
   Critics,
   Olevels,
   Ochempage,
   Oaddpage,
   Odpage,
+  CompPage,
 } from "./pages";
 import Navbar from "./components/Navbar";
 
@@ -23,8 +28,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/physics" element={<PhyPage />} />
         <Route exact path="/chemistry" element={<ChemPage />} />
+        <Route exact path="/computer" element={<CompPage />} />
         <Route exact path="/maths" element={<MathsPage />} />
-        <Route exact path="/tooltip" element={<Tooltip />} />
         <Route exact path="/critics" element={<Critics />} />
         <Route exact path="/olevels" element={<Olevels />} />
         <Route exact path="/olevels/chemistry" element={<Ochempage />} />
