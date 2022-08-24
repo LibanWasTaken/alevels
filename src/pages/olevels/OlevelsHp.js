@@ -98,16 +98,10 @@ const Wrapper = styled.main`
         background-color: #55acee;
       }
       &.addmathsTab:hover {
-        background-color: #5560ee;
+        background-color: #2b62ab;
       }
       &.chemistryTab:hover {
-        background-color: #00ba1a;
-      }
-      &.physicsTab:hover {
-        background-color: #ce2029;
-      }
-      &.computerTab:hover {
-        background-color: #009b77;
+        background-color: #45db9a;
       }
       &:hover {
         box-shadow: 0 10px 15px 0 #e6e6e6;

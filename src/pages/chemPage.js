@@ -110,10 +110,7 @@ export default function App() {
                   </Tree.Folder>
                 </Tree.Folder>
                 <Tree.Folder name="Recordings">
-                  <div
-                    className="
-            tip"
-                  >
+                  <div className="tip">
                     <Tree.File
                       name={"Passwords are automatically copied.tip"}
                     />

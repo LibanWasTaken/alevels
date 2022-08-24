@@ -160,7 +160,6 @@ p {
   background: var(--clr-primary-5);
   color: var(--clr-primary-10);
   padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 400;
   transition: var(--transition);
@@ -173,6 +172,7 @@ p {
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
+  letter-spacing: 1px;
 }
 .title {
   text-align: center;

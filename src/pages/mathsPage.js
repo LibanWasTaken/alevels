@@ -26,7 +26,7 @@ export default function App() {
             <div className="tree">
               <Tree>
                 <Tree.Folder name="Notes">
-                  <Tree.Folder name="Pure Maths">
+                  <Tree.Folder name="Pure Mathematics 1">
                     {file(
                       "Quadratics.pdf",
                       "https://drive.google.com/file/d/1-OCWY4ex4IVqF7n4UbiucTMkKar9tpR-/view?usp=sharing"
@@ -70,8 +70,31 @@ export default function App() {
                       "https://www.dropbox.com/sh/pyjinozmj4dtvcr/AAAE0UQpf82wL1Dbe7L222wRa/NOTES/M1?dl=0&subfolder_nav_tracking=1"
                     )}
                   </Tree.Folder>
-                  <Tree.Folder name="S1"></Tree.Folder>
-                  <Tree.Folder name="p3"></Tree.Folder>
+                  <Tree.Folder name="Pure Mathematics 3">
+                    <div className="tip">
+                      <Tree.File name={"Ashbe.tip"} />
+                    </div>
+                  </Tree.Folder>
+                  <Tree.Folder name="Probability & Statistics 1">
+                    <div className="tip">
+                      <Tree.File name={"Ashbe.tip"} />
+                    </div>
+                  </Tree.Folder>
+                </Tree.Folder>
+                <Tree.Folder name="Books">
+                  <div className="tip">
+                    <a className="critic-link" href="/critics">
+                      <Tree.File name={"Send a critic for AS.tip"} />
+                    </a>
+                  </div>
+                  {file(
+                    "P2 and P3 Coursebook.pdf",
+                    "https://drive.google.com/file/d/1OvsVTxKQZqO-QpfR4ztfGkm5jI4Ys1Af/view?usp=sharing"
+                  )}
+                  {file(
+                    "Probability and Statistics Coursebook.pdf",
+                    "https://drive.google.com/file/d/1stHH-Fri81DKUrWl7HumKr5qqB5NPObt/view?usp=sharing"
+                  )}
                 </Tree.Folder>
                 {file(
                   "Syllabus.pdf",

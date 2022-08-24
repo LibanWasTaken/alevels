@@ -60,7 +60,7 @@ export const Collapse = styled.div`
   z-index: 2;
 
   height: max-content;
-  max-height: ${(p) => (p.isOpen ? "800px" : "0px")};
+  max-height: ${(p) => (p.isOpen ? "2500px" : "0px")};
   overflow: hidden;
   transition: 0.3s ease-in-out;
 `;

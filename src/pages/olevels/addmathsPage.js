@@ -17,7 +17,7 @@ export default function App() {
   return (
     <Theme>
       <div className={localStorage.getItem("theme")}>
-        <Wrapper color={"#5560ee"}>
+        <Wrapper color={"#2B62AB"}>
           <div className="App">
             <div className="title">
               <h2>Add Maths</h2>

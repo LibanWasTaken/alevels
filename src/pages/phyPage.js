@@ -25,32 +25,33 @@ export default function App() {
             <div className="tree">
               <Tree>
                 <Tree.Folder name="Notes">
-                  <Tree.Folder name="Self">
-                    {file(
-                      "Physical Quantities and Uncertainties.pdf",
-                      "https://drive.google.com/file/d/1VJ4JA9i4BxthwC8BiuIO7f3SYMgTapV9/view?usp=sharing"
-                    )}
-                    {file(
-                      "Kinematics.pdf",
-                      "https://drive.google.com/file/d/1Vfs3b48XzG1idkQ6za25pv0Ccq4IF8W8/view?usp=sharing"
-                    )}
-                    {file(
-                      "Deformation.pdf",
-                      "https://drive.google.com/file/d/1V_QCcmRQwo6eiICW4_L5AuI_N1eMf1LR/view?usp=sharing"
-                    )}
-                    {file(
-                      "Waves.pdf",
-                      "https://drive.google.com/file/d/1VsAm1y5wQqiWX8bl_jwpI4pZFiA6QKe3/view?usp=sharing"
-                    )}
-                    {file(
-                      "Electricity.pdf",
-                      "https://drive.google.com/file/d/1VknpBJTor-x5FTSyV3c5eWF1EzesYDjO/view?usp=sharing"
-                    )}
-                    {file(
-                      "Radioactivity.pdf",
-                      "https://drive.google.com/file/d/1W-cQPRNRS2Q5lsxy9v2JBvaGVG7EHV4c/view?usp=sharing"
-                    )}
-                  </Tree.Folder>
+                  <div className="tip">
+                    <Tree.File name={"AS.tip"} />
+                  </div>
+                  {file(
+                    "Physical Quantities and Uncertainties.pdf",
+                    "https://drive.google.com/file/d/1VJ4JA9i4BxthwC8BiuIO7f3SYMgTapV9/view?usp=sharing"
+                  )}
+                  {file(
+                    "Kinematics.pdf",
+                    "https://drive.google.com/file/d/1Vfs3b48XzG1idkQ6za25pv0Ccq4IF8W8/view?usp=sharing"
+                  )}
+                  {file(
+                    "Deformation.pdf",
+                    "https://drive.google.com/file/d/1V_QCcmRQwo6eiICW4_L5AuI_N1eMf1LR/view?usp=sharing"
+                  )}
+                  {file(
+                    "Waves.pdf",
+                    "https://drive.google.com/file/d/1VsAm1y5wQqiWX8bl_jwpI4pZFiA6QKe3/view?usp=sharing"
+                  )}
+                  {file(
+                    "Electricity.pdf",
+                    "https://drive.google.com/file/d/1VknpBJTor-x5FTSyV3c5eWF1EzesYDjO/view?usp=sharing"
+                  )}
+                  {file(
+                    "Radioactivity.pdf",
+                    "https://drive.google.com/file/d/1W-cQPRNRS2Q5lsxy9v2JBvaGVG7EHV4c/view?usp=sharing"
+                  )}
                   <Tree.Folder name="Mamun Sir">
                     {file(
                       "Physical Quantities and Uncertainties.pdf",
@@ -89,6 +90,17 @@ export default function App() {
                       "https://drive.google.com/file/d/1N5A1jC4xZ6Vv4iiT0ERSoy8MSYAQR6PL/view?usp=sharing"
                     )}
                   </Tree.Folder>
+                  <div className="tip">
+                    <Tree.File name={"A2.tip"} />
+                  </div>
+                  {file(
+                    "Circular Motion.pdf",
+                    "https://drive.google.com/file/d/1hW2B0scEWwzuN5H5bt_U4kTn9-kfq_Ga/view?usp=sharing"
+                  )}
+                  {file(
+                    "Gravitational fields.pdf",
+                    "https://drive.google.com/file/d/1hc4DVlGhj3hLu6wrA1MwYRaqTjD2_yS2/view?usp=sharing"
+                  )}
                 </Tree.Folder>
                 {file(
                   "Syllabus.pdf",

@@ -112,7 +112,7 @@ const Wrapper = styled.main`
         background-color: #ce2029;
       }
       &.computerTab:hover {
-        background-color: #009b77;
+        background-color: #5560ee;
       }
       &:hover {
         box-shadow: 0 10px 15px 0 #e6e6e6;
@@ -136,11 +136,12 @@ const Wrapper = styled.main`
     p {
       display: none;
     }
+
     i {
       display: none;
     }
     h3 {
-      padding: 2rem 0;
+      padding: 1rem 0;
       transform: translateY(5px);
       text-align: center;
     }

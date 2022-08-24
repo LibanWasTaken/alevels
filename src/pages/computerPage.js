@@ -1,74 +1,62 @@
 import React from "react";
-import styled from "styled-components";
+import Tree from "./../components/Tree/Tree";
+import { Wrapper, Theme } from "./subjectStyles";
+
+import Yearly from "./paperSearch";
 
 export default function App() {
+  function file(fileName, fileUrl) {
+    return (
+      <a className="link" target="_blank" href={fileUrl}>
+        <Tree.File name={fileName} />
+      </a>
+    );
+  }
+  const subjectCode = 9618;
+
   return (
     <Theme>
       <div className={localStorage.getItem("theme")}>
-        <Wrapper color={"#55acee"}>
-          <div class="typewriter">
-            <h1>Perhaps a possible possibility.</h1>
+        <Wrapper color={"#5560ee"}>
+          <div className="App">
+            <div className="title">
+              <h2>Computer</h2>
+              <div className="underline"></div>
+            </div>
+            <div class="typewriter">
+              <h1>Perhaps a possible possibility?</h1>
+            </div>
+            <div className="tree">
+              <Tree>
+                <Tree.Folder name="Books">
+                  <div className="tip">
+                    <Tree.File
+                      name={"The green book is followed from 2021.tip"}
+                    />
+                  </div>
+                  {file(
+                    "Green Coursebook.pdf",
+                    "https://drive.google.com/file/d/13neGiSDP7MZxGtydA8OEfBWpM5WG-ZX9/view?usp=sharing"
+                  )}
+                  {file(
+                    "Purple Coursebook.pdf",
+                    "https://drive.google.com/file/d/1Huckq_AxTUcR_9L0rOI8w49wwNklb16W/view?usp=sharing"
+                  )}
+                  {file(
+                    "Blue Coursebook.pdf",
+                    "https://drive.google.com/file/d/1Y5-B0wZV8uICz34xle_IFtegATMm1uVx/view?usp=sharing"
+                  )}
+                </Tree.Folder>
+                {file(
+                  "Syllabus.pdf",
+                  "https://www.cambridgeinternational.org/Images/502962-2021-2023-syllabus.pdf"
+                )}
+              </Tree>
+            </div>
           </div>
+          <Yearly data={subjectCode} />
         </Wrapper>
       </div>
     </Theme>
   );
 }
-
-const Wrapper = styled.main`
-  /* background: #fff; */
-  height: 100vh;
-  padding-top: 30vh;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-
-  /* DEMO-SPECIFIC STYLES */
-  .typewriter h1 {
-    color: #333;
-
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid orange; /* The typwriter cursor */
-    white-space: nowrap;
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0.15em; /* Adjust as needed */
-    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-  }
-
-  /* The typing effect */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: orange;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .typewriter h1 {
-      font-size: 1rem;
-    }
-  }
-`;
-
-const Theme = styled.main`
-  .dark {
-    background: #333;
-    .typewriter h1 {
-      color: #fff;
-    }
-  }
-`;
