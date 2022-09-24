@@ -4,7 +4,6 @@ import DarkMode from "./Darkmode";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const [theme, setTheme] = useState("dark");
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
@@ -13,10 +12,17 @@ const Navbar = () => {
     <Theme>
       <div className={localStorage.getItem("theme")}>
         <Wrapper>
-          <nav>
+          <nav
+            onMouseLeave={() => {
+              if (showLinks) {
+                toggleLinks();
+              }
+            }}
+          >
             <div
               className={showLinks ? "hamburger toggle" : "hamburger"}
               onClick={toggleLinks}
+              // onMouseEnter={toggleLinks}
             >
               <div className="line1"></div>
               <div className="line2"></div>

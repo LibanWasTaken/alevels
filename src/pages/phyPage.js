@@ -95,11 +95,23 @@ export default function App() {
                   </div>
                   {file(
                     "Circular Motion.pdf",
-                    "https://drive.google.com/file/d/1hW2B0scEWwzuN5H5bt_U4kTn9-kfq_Ga/view?usp=sharing"
+                    "https://drive.google.com/file/d/1Hj15M1tbLP6j_UAJY9nCGUByUolDLw7o/view?usp=sharing"
                   )}
                   {file(
                     "Gravitational fields.pdf",
-                    "https://drive.google.com/file/d/1hc4DVlGhj3hLu6wrA1MwYRaqTjD2_yS2/view?usp=sharing"
+                    "https://drive.google.com/file/d/1oUAGZa0K_pxa3rg-znEjqo4pzzO5vLm6/view?usp=sharing"
+                  )}
+                  {file(
+                    "Electrical fields.pdf",
+                    "https://drive.google.com/file/d/1uHyCIbSR4xE0Rt_TKUQLdmyFHMeTVgOQ/view?usp=sharing"
+                  )}
+                  {file(
+                    "Oscillations.pdf",
+                    "https://drive.google.com/file/d/1eL2KIMC9q6leIqKbiH1ITEcQyfYFElcX/view?usp=sharing"
+                  )}
+                  {file(
+                    "Ideal Gases.pdf",
+                    "https://drive.google.com/file/d/1o-hf5ucPFk1_njN2II0x6NAMzHEovvld/view?usp=sharing"
                   )}
                 </Tree.Folder>
                 {file(

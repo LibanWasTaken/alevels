@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCalculator, FaRocket, FaFlask, FaLaptopCode } from "react-icons/fa";
+import LoadingBar from "react-top-loading-bar";
 
 const HomePage = () => {
+  const [progress, setProgress] = useState(0);
+  const [loadingColor, setLoadingColor] = useState(0);
+  function loadBar(color) {
+    setLoadingColor(color);
+    setProgress(progress + 30);
+    setTimeout(() => {
+      setProgress(100);
+    }, 2000);
+  }
+
   return (
     <Theme>
       <div className={localStorage.getItem("theme")}>
         <Wrapper>
+          <LoadingBar
+            color={loadingColor}
+            progress={progress}
+            onLoaderFinished={() => setProgress(0)}
+            shadow={false}
+            height={5}
+          />
           <ul>
             <li className="mathsTab">
-              <a href="/maths">
+              <a
+                href="/maths"
+                onClick={() => {
+                  loadBar("#55acee");
+                }}
+              >
                 <h3>Maths</h3>
                 <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
                 <i className="fa fa-dribbble">
@@ -18,7 +41,12 @@ const HomePage = () => {
               </a>
             </li>
             <li className="chemistryTab">
-              <a href="/chemistry">
+              <a
+                href="/chemistry"
+                onClick={() => {
+                  loadBar("#fc6d27");
+                }}
+              >
                 <h3>Chemistry</h3>
                 <p>Why tf would you pick this.</p>
                 <i className="fa fa-github">
@@ -27,7 +55,12 @@ const HomePage = () => {
               </a>
             </li>
             <li className="physicsTab">
-              <a href="/physics">
+              <a
+                href="/physics"
+                onClick={() => {
+                  loadBar("#ce2029");
+                }}
+              >
                 <h3>Physics</h3>
                 <p>Paper 1 &amp; 2, P3 is easy.</p>
                 <i className="fa fa-github">
@@ -36,7 +69,12 @@ const HomePage = () => {
               </a>
             </li>
             <li className="computerTab">
-              <a href="/computer">
+              <a
+                href="/computer"
+                onClick={() => {
+                  loadBar("#5560ee");
+                }}
+              >
                 <h3>Computer</h3>
                 <p>A possilbilty.</p>
                 <i className="fa fa-dribbble">
@@ -68,10 +106,6 @@ const Wrapper = styled.main`
     padding: 0;
     margin: 0;
     list-style: none;
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
     li {
       border-bottom: 2px solid #e6e6e6;
       position: relative;
