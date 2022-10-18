@@ -42,6 +42,9 @@ export default function App() {
             <div className="tree">
               <Tree>
                 <Tree.Folder name="Notes">
+                  <div className="tip">
+                    <Tree.File name={"AS Levels.tip"} />
+                  </div>
                   <Tree.Folder name="Inorganic">
                     {file(
                       "Atomic Structure.pdf",
@@ -108,6 +111,13 @@ export default function App() {
                       )}
                     </Tree.Folder>
                   </Tree.Folder>
+                  <div className="tip">
+                    <Tree.File name={"A2 Levels.tip"} />
+                  </div>
+                  {file(
+                    "Lattice Energy.pdf",
+                    "https://drive.google.com/file/d/18yfU1qLe7fsBQ7VPrsE86u5XFHtSYcYx/view?usp=sharing"
+                  )}
                 </Tree.Folder>
                 <Tree.Folder name="Recordings">
                   <div className="tip">
@@ -156,6 +166,10 @@ export default function App() {
                 {file(
                   "Syllabus.pdf",
                   "https://www.cambridgeinternational.org/Images/554616-2022-2024-syllabus.pdf"
+                )}
+                {file(
+                  "Content Overview",
+                  "https://shrib.com/?v=nc#Shane2rM0bYb"
                 )}
               </Tree>
             </div>

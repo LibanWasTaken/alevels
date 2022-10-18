@@ -11,7 +11,7 @@ const HomePage = () => {
     setProgress(progress + 30);
     setTimeout(() => {
       setProgress(100);
-    }, 2000);
+    }, 1000);
   }
 
   return (
@@ -34,7 +34,7 @@ const HomePage = () => {
                 }}
               >
                 <h3>Maths</h3>
-                <p>Pure Mathematics 1 &amp; 3, Mechanics and Statistics</p>
+                <p>Pure Maths 1 &amp; 3 and Statistics</p>
                 <i className="fa fa-dribbble">
                   <FaCalculator />
                 </i>
@@ -62,7 +62,7 @@ const HomePage = () => {
                 }}
               >
                 <h3>Physics</h3>
-                <p>Paper 1 &amp; 2, P3 is easy.</p>
+                <p>shorts/BL8Oe9oh7mY</p>
                 <i className="fa fa-github">
                   <FaRocket />
                 </i>
@@ -76,7 +76,7 @@ const HomePage = () => {
                 }}
               >
                 <h3>Computer</h3>
-                <p>A possilbilty.</p>
+                <p>A failed possibility.</p>
                 <i className="fa fa-dribbble">
                   <FaLaptopCode />
                 </i>

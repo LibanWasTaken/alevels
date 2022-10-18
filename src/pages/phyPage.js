@@ -52,7 +52,7 @@ export default function App() {
                     "Radioactivity.pdf",
                     "https://drive.google.com/file/d/1W-cQPRNRS2Q5lsxy9v2JBvaGVG7EHV4c/view?usp=sharing"
                   )}
-                  <Tree.Folder name="Mamun Sir">
+                  <Tree.Folder name="W/s">
                     {file(
                       "Physical Quantities and Uncertainties.pdf",
                       "https://drive.google.com/file/d/1Ym63L92RA2x82gLGAKf4R7c9Tp4ALl-n/view?usp=sharing"
@@ -94,25 +94,55 @@ export default function App() {
                     <Tree.File name={"A2.tip"} />
                   </div>
                   {file(
-                    "Circular Motion.pdf",
+                    "Motion in a circle.pdf",
                     "https://drive.google.com/file/d/1Hj15M1tbLP6j_UAJY9nCGUByUolDLw7o/view?usp=sharing"
                   )}
                   {file(
                     "Gravitational fields.pdf",
                     "https://drive.google.com/file/d/1oUAGZa0K_pxa3rg-znEjqo4pzzO5vLm6/view?usp=sharing"
                   )}
+                  <a style={{ color: "red", opacity: "20%" }}>
+                    <Tree.File name={"Temperature.pdf"} />
+                  </a>
                   {file(
-                    "Electrical fields.pdf",
-                    "https://drive.google.com/file/d/1uHyCIbSR4xE0Rt_TKUQLdmyFHMeTVgOQ/view?usp=sharing"
+                    "Ideal Gases.pdf",
+                    "https://drive.google.com/file/d/1o-hf5ucPFk1_njN2II0x6NAMzHEovvld/view?usp=sharing"
+                  )}
+                  {file(
+                    "Thermodynamics.pdf",
+                    "https://drive.google.com/file/d/11MTnaQzOnhRR2jMWyrPL6Pf09sonNrTy/view?usp=sharing"
                   )}
                   {file(
                     "Oscillations.pdf",
                     "https://drive.google.com/file/d/1eL2KIMC9q6leIqKbiH1ITEcQyfYFElcX/view?usp=sharing"
                   )}
                   {file(
-                    "Ideal Gases.pdf",
-                    "https://drive.google.com/file/d/1o-hf5ucPFk1_njN2II0x6NAMzHEovvld/view?usp=sharing"
+                    "Electrical fields.pdf",
+                    "https://drive.google.com/file/d/1uHyCIbSR4xE0Rt_TKUQLdmyFHMeTVgOQ/view?usp=sharing"
                   )}
+                  {file(
+                    "Capacitance.pdf",
+                    "https://drive.google.com/file/d/11iPKKebYgzUcTWlVEWFtDeveOus4jIDm/view?usp=sharing"
+                  )}
+                  <a style={{ color: "red", opacity: "20%" }}>
+                    <Tree.File name={"Magnetic fields.pdf"} />
+                  </a>
+                  {file(
+                    "Alternating Current.pdf",
+                    "https://drive.google.com/file/d/11U2Z5YRE6cPpHyKqJxbhG8i3KrfgMCcJ/view?usp=sharing"
+                  )}
+                  <a style={{ color: "red", opacity: "20%" }}>
+                    <Tree.File name={"Quantum physics.pdf"} />
+                  </a>
+                  <a style={{ color: "red", opacity: "20%" }}>
+                    <Tree.File name={"Nuclear physics.pdf"} />
+                  </a>
+                  <a style={{ color: "red", opacity: "20%" }}>
+                    <Tree.File name={"Medical physics.pdf"} />
+                  </a>
+                  <a style={{ color: "red", opacity: "20%" }}>
+                    <Tree.File name={"Astronomy and cosmology.pdf"} />
+                  </a>
                 </Tree.Folder>
                 {file(
                   "Syllabus.pdf",

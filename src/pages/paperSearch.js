@@ -312,7 +312,7 @@ const Wrappers = styled.main`
   #batches {
     margin: 1rem;
     border: none;
-    outline: none;
+    /* outline: none; */
     font-size: 1rem;
     padding: 10px;
     font-family: "Poppins", sans-serif;
@@ -344,8 +344,7 @@ const Wrappers = styled.main`
       @content;
     }
   }
-  /* FIXME: Maybe these spans are the problem */
-  /* TODO: clean up the excess css */
+
   span {
     position: relative;
     display: inline-block;
