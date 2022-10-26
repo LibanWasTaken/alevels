@@ -98,7 +98,7 @@ export default function App() {
                 </Tree.Folder>
                 {file(
                   "Syllabus.pdf",
-                  "https://www.cambridgeinternational.org/Images/415060-2020-2022-syllabus.pdf"
+                  "https://www.cambridgeinternational.org/Images/597421-2023-2025-syllabus.pdf"
                 )}
                 {file(
                   "M19 Formulas.pdf",

@@ -1,12 +1,27 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import styled from "styled-components";
 import DarkMode from "./Darkmode";
+import { FaEye } from "react-icons/fa";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const [viewCount, setviewCount] = useState(0);
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
+
+  useEffect(() => {
+    fetch("https://api.countapi.xyz/update/alevels/counter/?amount=0.5")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setviewCount(result.value);
+        },
+        () => {
+          setviewCount("1");
+        }
+      );
+  }, []);
 
   return (
     <Theme>
@@ -51,6 +66,12 @@ const Navbar = () => {
                 >
                   Contact Me
                 </a>
+              </li>
+              <li className={showLinks ? "fade" : ""}>
+                <div className="eye">
+                  <FaEye className="eye-icon" />
+                  <p>{viewCount}</p>
+                </div>
               </li>
 
               {/* <li>
@@ -260,6 +281,15 @@ const Wrapper = styled.section`
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
     background-color: #f2f5f7;
+  }
+
+  .eye {
+    display: flex;
+    gap: 12px;
+  }
+
+  .eye-icon {
+    margin-top: 5px;
   }
 `;
 
