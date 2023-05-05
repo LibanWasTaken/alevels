@@ -6,6 +6,8 @@ import {
   FaRegLightbulb,
   FaDropbox,
   FaGoogleDrive,
+  FaYoutube,
+  FaLink,
 } from "react-icons/fa";
 
 const FILE_ICONS = {
@@ -18,6 +20,8 @@ const FILE_ICONS = {
   tip: <FaRegLightbulb />,
   dropbox: <FaDropbox />,
   drive: <FaGoogleDrive />,
+  yt: <FaYoutube />,
+  com: <FaLink />,
 };
 
 export default FILE_ICONS;

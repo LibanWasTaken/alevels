@@ -118,6 +118,10 @@ export default function App() {
                     "Lattice Energy.pdf",
                     "https://drive.google.com/file/d/18yfU1qLe7fsBQ7VPrsE86u5XFHtSYcYx/view?usp=sharing"
                   )}
+                  {file(
+                    "The Rest..",
+                    "https://nyc3.digitaloceanspaces.com/memecreator-cdn/media/__processed__/c5d/template-i-cant-take-it-anymore-seriously-im-at-my-limit-2198-0c6db91aec9c.jpeg"
+                  )}
                 </Tree.Folder>
                 <Tree.Folder name="Recordings">
                   <div className="tip">
@@ -159,6 +163,10 @@ export default function App() {
                     )}
                   </Tree.Folder>
                 </Tree.Folder>
+                {file(
+                  "A2 Definations",
+                  "https://docs.google.com/spreadsheets/d/12yKjbsSI3C-Yw5_J2OWNdNmwk7xGDy0uSjYRkpVusoA/edit?usp=sharing"
+                )}
                 {file(
                   "Data Booklet.pdf",
                   "https://www.cambridgeinternational.org/Images/164870-2016-specimen-data-booklet.pdf"

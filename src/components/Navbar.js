@@ -18,7 +18,7 @@ const Navbar = () => {
           setviewCount(result.value);
         },
         () => {
-          setviewCount("1");
+          setviewCount("...");
         }
       );
   }, []);
@@ -61,7 +61,7 @@ const Navbar = () => {
               </li>
               <li className={showLinks ? "fade" : ""}>
                 <a
-                  href="https://www.youtube.com/watch?v=d1YBv2mWll0"
+                  href="https://www.youtube.com/watch?v=8D4WZmyyx_k&ab_channel=JCDHDelgado"
                   target="_blank"
                 >
                   Contact Me

@@ -161,12 +161,16 @@ const Yearly = (props) => {
       setSbjCode(props.data);
     } else if (!(sbjCode in list)) {
       setText("Subject code doesn't exist");
-    } else if (variant === "") {
-      setText("variant empty");
-    } else if (year === "" || parseInt(year) < 1 || parseInt(year) > 21) {
-      setText("year out of range");
+    } else if (
+      variant === "" ||
+      parseInt(variant) < 11 ||
+      parseInt(variant) > 99
+    ) {
+      setText("Variant out of range");
+    } else if (year === "" || parseInt(year) < 1 || parseInt(year) > 99) {
+      setText("Year out of range");
     } else {
-      setText("Loading...");
+      setText("");
       setText2("(or not I dont know..)");
 
       const url = `https://papers.gceguide.com/${
@@ -208,8 +212,8 @@ const Yearly = (props) => {
                     onChange={(e) => setVariant(e.target.value)}
                     type="number"
                     placeholder="21 / 12 / 11"
-                    min={11}
-                    max={43}
+                    min={"01"}
+                    max={"99"}
                   />
                   <label htmlFor="variant">Variant</label>
                 </span>
@@ -221,8 +225,8 @@ const Yearly = (props) => {
                     onChange={(e) => setYear(e.target.value)}
                     type="number"
                     placeholder="09 / 17 / 21"
-                    min="1"
-                    max="21"
+                    min="01"
+                    max="99"
                   />
                   <label htmlFor="year">Year</label>
                 </span>
@@ -247,8 +251,8 @@ const Yearly = (props) => {
                     search ms
                   </button>
                 </div>
-                {/* <h4>{text}</h4>
-                <h6>{text2}</h6> */}
+                <h4>{text}</h4>
+                {/* <h6>{text2}</h6> */}
               </div>
             </div>
           </section>

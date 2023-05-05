@@ -37,6 +37,19 @@ export const Wrapper = styled.main`
     background: var(--color, black);
     margin-left: auto;
     margin-right: auto;
+    /* animation: hovering 5s infinite ease-in-out; */
+  }
+
+  @keyframes hovering {
+    0% {
+      width: 6rem;
+    }
+    50% {
+      width: 8rem;
+    }
+    100% {
+      width: 6rem;
+    }
   }
 
   .tip {

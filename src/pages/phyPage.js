@@ -124,29 +124,64 @@ export default function App() {
                     "Capacitance.pdf",
                     "https://drive.google.com/file/d/11iPKKebYgzUcTWlVEWFtDeveOus4jIDm/view?usp=sharing"
                   )}
-                  <a style={{ color: "red", opacity: "20%" }}>
-                    <Tree.File name={"Magnetic fields.pdf"} />
-                  </a>
+                  {file(
+                    "Magnetic fields.pdf",
+                    "https://drive.google.com/file/d/1mEYlvjvHmaSD54zuavI9RxiPaNtkvUOS/view?usp=share_link"
+                  )}
                   {file(
                     "Alternating Current.pdf",
                     "https://drive.google.com/file/d/11U2Z5YRE6cPpHyKqJxbhG8i3KrfgMCcJ/view?usp=sharing"
                   )}
-                  <a style={{ color: "red", opacity: "20%" }}>
-                    <Tree.File name={"Quantum physics.pdf"} />
-                  </a>
-                  <a style={{ color: "red", opacity: "20%" }}>
-                    <Tree.File name={"Nuclear physics.pdf"} />
-                  </a>
-                  <a style={{ color: "red", opacity: "20%" }}>
-                    <Tree.File name={"Medical physics.pdf"} />
-                  </a>
-                  <a style={{ color: "red", opacity: "20%" }}>
-                    <Tree.File name={"Astronomy and cosmology.pdf"} />
-                  </a>
+                  {file(
+                    "Quantum physics.pdf",
+                    "https://drive.google.com/file/d/1Qe8JKLx5Eijba9sGZkUCUumCxz7JnG7f/view?usp=share_link"
+                  )}
+                  {file(
+                    "Nuclear physics.pdf",
+                    "https://drive.google.com/file/d/1Qg0co2Ipl11Mec2tFsfSqkchOw9onnCb/view?usp=share_link"
+                  )}
+                  {file(
+                    "Medical physics.pdf",
+                    "https://drive.google.com/file/d/1Qg9He3XA2w_hGW27kg71h1_qz8Kznv2j/view?usp=share_link"
+                  )}
+                  {file(
+                    "Astronomy and cosmology.pdf",
+                    "https://drive.google.com/file/d/1QiMOKK69ssa-AUniOxpDz7WnyTYkvLV6/view?usp=share_link"
+                  )}
+                </Tree.Folder>
+                <Tree.Folder name="Handy">
+                  {file(
+                    "savemyexams.com",
+                    "https://www.savemyexams.co.uk/a-level/physics/cie/22/"
+                  )}
+                  {file(
+                    "Science Shorts.yt",
+                    "https://www.youtube.com/c/ScienceShorts/playlists?view=50&sort=dd&shelf_id=2"
+                  )}
+                  {file(
+                    "physicsandmathstutor.com",
+                    "https://www.physicsandmathstutor.com/physics-revision/a-level-caie/"
+                  )}
+                  {file(
+                    "Physics blogspot.com",
+                    "https://9702-physics.blogspot.com/"
+                  )}
                 </Tree.Folder>
                 {file(
                   "Syllabus.pdf",
                   "https://www.cambridgeinternational.org/Images/554625-2022-2024-syllabus.pdf"
+                )}
+                {file(
+                  "A2 Formulas.drive",
+                  "https://docs.google.com/spreadsheets/d/18SJul4tv5pfKQpgLne8l_0FM59gp_p_s2f6RIN0jGg0/edit?usp=share_link"
+                )}
+                {file(
+                  "A2 Definations",
+                  "https://docs.google.com/spreadsheets/d/18SJul4tv5pfKQpgLne8l_0FM59gp_p_s2f6RIN0jGg0/edit?usp=sharing"
+                )}
+                {file(
+                  "Data and Formulae provided.pdf",
+                  "https://drive.google.com/file/d/1UXIFSrjwuCqB433LLbMex5iRSFiZ-Bmt/view?usp=share_link"
                 )}
               </Tree>
             </div>
