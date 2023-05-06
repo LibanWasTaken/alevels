@@ -164,7 +164,7 @@ export default function App() {
                   </Tree.Folder>
                 </Tree.Folder>
                 {file(
-                  "A2 Definations",
+                  "A2 Definations.excel",
                   "https://docs.google.com/spreadsheets/d/12yKjbsSI3C-Yw5_J2OWNdNmwk7xGDy0uSjYRkpVusoA/edit?usp=sharing"
                 )}
                 {file(

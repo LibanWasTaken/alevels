@@ -176,12 +176,12 @@ export default function App() {
                   "https://docs.google.com/spreadsheets/d/18SJul4tv5pfKQpgLne8l_0FM59gp_p_s2f6RIN0jGg0/edit?usp=share_link"
                 )}
                 {file(
-                  "A2 Definations",
+                  "A2 Definations.excel",
                   "https://docs.google.com/spreadsheets/d/18SJul4tv5pfKQpgLne8l_0FM59gp_p_s2f6RIN0jGg0/edit?usp=sharing"
                 )}
                 {file(
                   "Data and Formulae provided.pdf",
-                  "https://drive.google.com/file/d/1UXIFSrjwuCqB433LLbMex5iRSFiZ-Bmt/view?usp=share_link"
+                  "https://drive.google.com/file/d/1LhmOVfY45g9xPoEPWoQHHmyMmnBhT3og/view?usp=share_link"
                 )}
               </Tree>
             </div>

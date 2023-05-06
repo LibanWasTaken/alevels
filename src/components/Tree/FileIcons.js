@@ -8,6 +8,7 @@ import {
   FaGoogleDrive,
   FaYoutube,
   FaLink,
+  FaRegFileExcel,
 } from "react-icons/fa";
 
 const FILE_ICONS = {
@@ -17,6 +18,7 @@ const FILE_ICONS = {
   jsx: <DiReact />,
   pdf: <FaRegFilePdf />,
   zoom: <FaVideo />,
+  excel: <FaRegFileExcel />,
   tip: <FaRegLightbulb />,
   dropbox: <FaDropbox />,
   drive: <FaGoogleDrive />,
