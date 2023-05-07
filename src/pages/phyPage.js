@@ -173,7 +173,7 @@ export default function App() {
                 )}
                 {file(
                   "A2 Formulas.drive",
-                  "https://docs.google.com/spreadsheets/d/18SJul4tv5pfKQpgLne8l_0FM59gp_p_s2f6RIN0jGg0/edit?usp=share_link"
+                  "https://drive.google.com/file/d/1LhmOVfY45g9xPoEPWoQHHmyMmnBhT3og/view?usp=share_link"
                 )}
                 {file(
                   "A2 Definations.excel",

@@ -5,7 +5,7 @@ import { FaEye } from "react-icons/fa";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const [viewCount, setviewCount] = useState(0);
+  const [viewCount, setviewCount] = useState("...");
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
@@ -18,7 +18,7 @@ const Navbar = () => {
           setviewCount(result.value);
         },
         () => {
-          setviewCount("...");
+          setviewCount("ERR");
         }
       );
   }, []);

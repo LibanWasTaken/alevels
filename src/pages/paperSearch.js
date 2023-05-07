@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { FaYoutube } from "react-icons/fa";
 
 const Yearly = (props) => {
   const [sbjCode, setSbjCode] = useState(props.data);
@@ -12,11 +13,11 @@ const Yearly = (props) => {
     var index = par.selectedIndex;
     var b = par.options[index].text;
     if (b === "Summer" || !b) {
-      return "s";
+      return "smj";
     } else if (b === "Winter") {
-      return "w";
+      return "won";
     } else if (b === "March") {
-      return "m";
+      return "mfm";
     }
   }
 
@@ -172,15 +173,25 @@ const Yearly = (props) => {
     } else {
       setText("");
       setText2("(or not I dont know..)");
-
-      const url = `https://papers.gceguide.com/${
-        parseInt(sbjCode) < 8000 ? "O" : "A"
-      }%20Levels/${list[parseInt(sbjCode)].replaceAll(
-        " ",
-        "%20"
-      )}/20${year}/${sbjCode}_${getBatch()}${year}_${type}_${variant}.pdf`;
-
-      window.open(url);
+      if (type == "yt") {
+        window.open(
+          `https://www.youtube.com/results?search_query=${sbjCode}+${getBatch().slice(
+            1,
+            3
+          )}+20${year}+${variant}`
+        );
+      } else {
+        window.open(
+          `https://papers.gceguide.com/${
+            parseInt(sbjCode) < 8000 ? "O" : "A"
+          }%20Levels/${list[parseInt(sbjCode)].replaceAll(
+            " ",
+            "%20"
+          )}/20${year}/${sbjCode}_${
+            getBatch()[0]
+          }${year}_${type}_${variant}.pdf`
+        );
+      }
     }
   }
   return (
@@ -241,14 +252,21 @@ const Yearly = (props) => {
                     className=" qpBtn"
                     onClick={() => openLink("qp")}
                   >
-                    search qp
+                    Question Paper
                   </button>
                   <button
                     type="submit"
                     className=" msBtn"
                     onClick={() => openLink("ms")}
                   >
-                    search ms
+                    Mark Scheme
+                  </button>
+                  <button
+                    type="submit"
+                    className="ytBtn"
+                    onClick={() => openLink("yt")}
+                  >
+                    <FaYoutube className="ytLogo" />
                   </button>
                 </div>
                 <h4>{text}</h4>
@@ -311,6 +329,18 @@ const Wrappers = styled.main`
     background-color: #ff5050;
     color: white;
     transition: 0.25s;
+  }
+  .ytBtn {
+    background: none;
+    background-color: white;
+    color: black;
+  }
+  .ytBtn:hover {
+    color: #ff0000;
+    transition: 0.25s;
+  }
+  .ytLogo {
+    transform: translate(0, 2px) scale(1.5);
   }
 
   #batches {
@@ -432,7 +462,8 @@ const Wrappers = styled.main`
 const Theme = styled.main`
   .dark {
     overflow: hidden;
-    h1 {
+    h1,
+    h4 {
       color: white;
     }
     .row {
@@ -440,6 +471,9 @@ const Theme = styled.main`
     }
     select {
       background-color: #444;
+      color: white;
+    }
+    .ytBtn {
       color: white;
     }
 
