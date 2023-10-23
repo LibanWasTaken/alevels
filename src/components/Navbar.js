@@ -2,25 +2,43 @@ import { React, useState, useEffect } from "react";
 import styled from "styled-components";
 import DarkMode from "./Darkmode";
 import { FaEye } from "react-icons/fa";
+import { db } from "../firebase";
+import {
+  addDoc,
+  getDoc,
+  getDocs,
+  setDoc,
+  collection,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const [viewCount, setviewCount] = useState("...");
+  const [viewCount, setViewCount] = useState("...");
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
 
+  const getViews = async () => {
+    try {
+      const docRef = doc(db, "stats", "SBLvRdAP8k6CUtPA9wsS");
+      const docSnap = await getDoc(docRef);
+      const dataReceived = docSnap.data();
+      if (dataReceived) {
+        console.log(dataReceived);
+        setViewCount(dataReceived.views.toLocaleString());
+
+        await updateDoc(docRef, { views: dataReceived.views + 1 });
+      } else {
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   useEffect(() => {
-    fetch("https://api.countapi.xyz/update/alevels/counter/?amount=0.5")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setviewCount(result.value);
-        },
-        () => {
-          setviewCount("ERR");
-        }
-      );
+    getViews();
   }, []);
 
   return (
