@@ -1,6 +1,8 @@
 import { React, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import { db } from "../firebase";
+import { doc, setDoc } from "firebase/firestore";
 
 export default function ContactUs() {
   const [end, setEnd] = useState("");
@@ -14,27 +16,53 @@ export default function ContactUs() {
     }, 3000);
   }
 
-  function sendEmail(e) {
+  // function sendEmail(e) {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_i6b3bon",
+  //       "template_kgesmbi",
+  //       e.target,
+  //       "u85Bl-8AaU5kiCrCV"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   // e.target.reset();
+  //   ending(e);
+  // }
+
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_i6b3bon",
-        "template_kgesmbi",
-        e.target,
-        "u85Bl-8AaU5kiCrCV"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    // e.target.reset();
-    ending(e);
-  }
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+
+    const formData = {
+      name,
+      email,
+      message,
+      time: String(Date()),
+    };
+
+    try {
+      console.log(formData);
+      const timestamp = String(new Date().getTime());
+
+      await setDoc(doc(db, "critics", timestamp), formData);
+      ending(e);
+    } catch (error) {
+      console.log(error);
+      alert("Error sending critic");
+    }
+  };
 
   return (
     <Wrapper className="criticsPage">
@@ -49,7 +77,7 @@ export default function ContactUs() {
           ) : (
             <h4>
               Write anything you want honestly <br />
-              dont spam
+              (it works now)
             </h4>
           )}
 
