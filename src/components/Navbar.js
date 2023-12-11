@@ -79,7 +79,7 @@ const Navbar = () => {
               </li>
               <li className={showLinks ? "fade" : ""}>
                 <a
-                  href="https://www.youtube.com/watch?v=8D4WZmyyx_k&ab_channel=JCDHDelgado"
+                  href="https://www.google.com/search?client=opera-gx&q=you+dont+get+to+do+that&sourceid=opera&ie=UTF-8&oe=UTF-8"
                   target="_blank"
                 >
                   Contact Me
